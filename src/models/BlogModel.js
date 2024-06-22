@@ -23,7 +23,8 @@ const blogSchema = mongoose.Schema({
 		required: true
 	},
 	author: {
-		type: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
+		type: mongoose.Schema.Types.ObjectId, 
+		ref: "User",
 		required: true
 	},
 	likes: {
