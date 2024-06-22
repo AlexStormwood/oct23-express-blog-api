@@ -16,6 +16,7 @@ const { commentSchema } = require("./CommentSchema.js");
 const blogSchema = mongoose.Schema({
 	title: {
 		type: String,
+		unique: true,
 		required: true
 	},
 	content: {

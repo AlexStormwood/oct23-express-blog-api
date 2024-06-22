@@ -1,10 +1,11 @@
 const express = require("express");
 const { BlogModel } = require("../models/BlogModel");
+const { UserModel } = require("../models/UserModel"); // Need this imported somewhere in the server code to make the server connection use Users
 const router = express.Router();
 
 router.get("/", async (request, response, next) => {
 
-	let result = await BlogModel.find({}).exec();
+	let result = await BlogModel.find({}).populate("author").exec();
 
 	response.json({
 		message:"Blog router homepage",
