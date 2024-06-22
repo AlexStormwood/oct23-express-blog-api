@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "OCT23 Express Blog API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
