@@ -17,11 +17,11 @@ const userSchema = mongoose.Schema({
 		required: false, 
 		unique: false
 	},
-	comments: {
-		// These are NOT the same comments as what the Blogs contain, they just reuse the comment schema
-		types: [commentSchema],
-		required: false
-	}
+	// comments: {
+	// 	// These are NOT the same comments as what the Blogs contain, they just reuse the comment schema
+	// 	types: [commentSchema],
+	// 	required: false
+	// }
 });
 
 
