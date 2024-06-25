@@ -28,8 +28,8 @@ async function seedUsers () {
 
 	console.log("Creating users from insertMany:");
 	let result = await UserModel.insertMany(userData)
-	console.log(result);
-	return result;
+	console.log([...result, callum]);
+	return [...result, callum];
 }
 
 
