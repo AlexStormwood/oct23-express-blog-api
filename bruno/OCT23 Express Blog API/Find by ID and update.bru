@@ -4,8 +4,14 @@ meta {
   seq: 5
 }
 
-put {
-  url: http://localhost:3000/blogs/findById/
-  body: none
+patch {
+  url: http://localhost:3000/blogs/findById/66762ec5638ddfeaab7db4f6
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "title":"New Updated Title 2nd Update, Woohoo!"
+  }
 }
