@@ -28,6 +28,13 @@ async function seedUsers () {
 
 	console.log("Creating users from insertMany:");
 	let result = await UserModel.insertMany(userData)
+
+	// If we wanted pre-save on the insertMany, this is the code to do it: 
+	// let result2 = await Promise.all(userData.map(async (user) => {
+	// 	let newUser = await UserModel.create(user);
+	// 	return newUser;
+	// }));
+
 	console.log([...result, callum]);
 	return [...result, callum];
 }
