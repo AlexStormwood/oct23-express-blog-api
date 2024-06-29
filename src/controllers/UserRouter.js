@@ -52,13 +52,16 @@ router.post("/", async (request, response, next) => {
 		return error
 	});
 
+	let jwt = createJwt(result._id);
+
 	if (result.errors) {
 		return next(result);
 	}
 
 	response.json({
 		message:"User router operation",
-		result: result
+		result: result,
+		jwt: jwt
 	});
 });
 
