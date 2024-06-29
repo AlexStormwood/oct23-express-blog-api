@@ -104,6 +104,8 @@ router.post("/jwt", async (request, response, next) => {
 	// Find user by username in DB
 	let foundUser = await UserModel.findOne({username: request.body.username}).exec();
 
+	console.log(request.body, foundUser);
+
 	// Compare request.body.password to foundUser.password using the compare function 
 	let isPasswordCorrect = await comparePasswords(request.body.password, foundUser.password);
 
