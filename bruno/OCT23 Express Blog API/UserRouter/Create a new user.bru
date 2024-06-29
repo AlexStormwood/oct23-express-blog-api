@@ -1,0 +1,18 @@
+meta {
+  name: Create a new user
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/users/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username":"dillon",
+    "password":"SuperCoolPassword"
+  }
+}

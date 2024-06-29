@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "seed": "node src/utils/seed.js"
+    "seed": "node src/utils/seed.js",
+    "productionInstallAndSeed":"npm install && npm run seed"
   },
   "keywords": [],
   "author": "",

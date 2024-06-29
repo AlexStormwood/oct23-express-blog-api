@@ -5,7 +5,11 @@ dotenv.config();
 
 
 async function databaseConnect(){
-	let databaseURL = process.env.DATABASE_URL || "mongodb://localhost:27017/oct23-blog-db";
+
+	// if (process.env.NODE_ENV == "production"){
+	// 	databaseUrl = process.env.DATABASE_URL_PRODUCTION
+	// }
+	let databaseURL = process.env.DATABASE_URL;
 
 	await mongoose.connect(databaseURL);
 	console.log("Database connecting completed!");

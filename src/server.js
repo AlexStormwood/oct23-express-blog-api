@@ -22,6 +22,10 @@ const blogRouter = require("./controllers/BlogRouter.js");
 app.use("/blogs", blogRouter);
 
 
+const userRouter = require("./controllers/UserRouter.js");
+app.use("/users", userRouter);
+
+
 
 app.get("*", (request, response, next) => {
 	response.status(404).json({
