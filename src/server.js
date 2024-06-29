@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
-
+const cors = require("cors");
 
 
 
 // Allows POST requests to have JSON body content
 app.use(express.json());
 
-
+app.use(cors());
 
 app.get("/", (request, response, next) => {
 

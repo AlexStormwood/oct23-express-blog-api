@@ -47,8 +47,14 @@ function validateJwt(jwtToValidate){
 	return isJwtValid;
 }
 
+function decodeJwt(jwtToDecode){
+	let decodedData = jwt.verify(jwtToDecode, process.env.JWT_KEY)
+	return decodedData;
+}
+
 module.exports = {
 	comparePasswords,
 	createJwt,
-	validateJwt
+	validateJwt,
+	decodeJwt
 }
